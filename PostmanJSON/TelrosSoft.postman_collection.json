@@ -1,0 +1,207 @@
+{
+	"info": {
+		"_postman_id": "0737aa15-c3fc-4310-b50c-2e9c74a59f65",
+		"name": "TelrosSoft",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "26650924",
+		"_collection_link": "https://grey-meteor-12099.postman.co/workspace/Team-Workspace~6ec7947a-492a-4ebe-8952-a2c79db89b44/collection/26650924-0737aa15-c3fc-4310-b50c-2e9c74a59f65?action=share&creator=26650924&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "ContactInf",
+			"item": [
+				{
+					"name": "http://localhost:9090/users",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"lastName\":\"Ivanov3\",\r\n    \"name\":\"Ivanov2223\",\r\n    \"email\":\"ivan@mail.hu\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:9090/users"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:9090/users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:9090/users"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:9090/users/1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:9090/users/1"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:9090/users/2",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"lastName\":\"Ivanov2\",\r\n    \"name\":\"Ivanov2\",\r\n    \"email\":\"ivan@mail.ru\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:9090/users/2"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:9090/users/1",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:9090/users/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DeteiledInf",
+			"item": [
+				{
+					"name": "http://localhost:9090/users/1/detailed",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"secondName\":\"Дмитриевич\",\r\n    \"dateOfBirth\":\"2017-08-03T10:15:30\",\r\n    \"phoneNumber\":\"89964012020\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:9090/users/1/detailed"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:9090/users/detailed",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:9090/users/detailed"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:9090/users/1/detailed",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:9090/users/3/detailed"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:9090/users/1/detailed",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"secondName\":\"Олегович\",\r\n    \"dateOfBirth\":\"2019-08-03T10:15:30\",\r\n    \"phoneNumber\":\"89964022020\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:9090/users/4/detailed"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:9090/users/1/detailed",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:9090/users/3/detailed"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Photo",
+			"item": [
+				{
+					"name": "http://localhost:9090/users/1/photo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/aleks/Downloads/Фото 1.jpg"
+								}
+							]
+						},
+						"url": "http://localhost:9090/users/1/photo"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:9090/users/1/photo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:9090/users/2/photo"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:9090/users/1/photo",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"secondName\":\"Олегович\",\r\n    \"dateOfBirth\":\"2019-08-03T10:15:30\",\r\n    \"phoneNumber\":\"89964022020\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:9090/users/4/detailed"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:9090/users/1/photo",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:9090/users/3/detailed"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
