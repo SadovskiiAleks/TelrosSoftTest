@@ -17,7 +17,7 @@ public class PhotoUserServiceImpl implements PhotoUserService {
     @Override
     public boolean create(PhotoUserModel photoUserModel, long id) {
 
-        if (!photoUserModelRepository.existsById(id)){
+        if (!photoUserModelRepository.existsById(id)) {
             photoUserModelRepository.save(photoUserModel);
             return true;
         } else {
@@ -32,7 +32,7 @@ public class PhotoUserServiceImpl implements PhotoUserService {
 
     @Override
     public PhotoUserModel read(Long id) {
-        if (photoUserModelRepository.existsById(id)){
+        if (photoUserModelRepository.existsById(id)) {
             return photoUserModelRepository.getReferenceById(id);
         } else {
             return null;

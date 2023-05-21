@@ -27,7 +27,7 @@ public class ContactInformationServiceImpl implements ContactInformationService 
 
     @Override
     public ContactInformationModel read(Long id) {
-        if (contactInformationRepository.existsById(id)){
+        if (contactInformationRepository.existsById(id)) {
             return contactInformationRepository.getReferenceById(id);
         } else {
             return null;

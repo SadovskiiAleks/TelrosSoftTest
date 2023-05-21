@@ -4,8 +4,6 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.Data;
 
-import java.time.LocalDateTime;
-
 @Entity
 @Table(name = "contactInformation")
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})

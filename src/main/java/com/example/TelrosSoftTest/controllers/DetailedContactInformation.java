@@ -33,7 +33,7 @@ public class DetailedContactInformation {
             detailedContactInformationModel.setContactInformationModel(user);
 
             if (detailedContactInformationService.create(detailedContactInformationModel, id)) {
-                return  new ResponseEntity<>(HttpStatus.CREATED);
+                return new ResponseEntity<>(HttpStatus.CREATED);
             } else {
                 return new ResponseEntity<>(HttpStatus.CONFLICT);
             }
@@ -47,8 +47,8 @@ public class DetailedContactInformation {
     public ResponseEntity<List<DetailedContactInformationModel>> read() {
         final List<DetailedContactInformationModel> users = detailedContactInformationService.readAll();
 
-        if (users != null &&  !users.isEmpty()) {
-            return  new ResponseEntity<>(users, HttpStatus.OK);
+        if (users != null && !users.isEmpty()) {
+            return new ResponseEntity<>(users, HttpStatus.OK);
         } else {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }

@@ -2,9 +2,7 @@ package com.example.TelrosSoftTest.controllers;
 
 import com.example.TelrosSoftTest.compressUtil.ImageUtils;
 import com.example.TelrosSoftTest.model.ContactInformationModel;
-import com.example.TelrosSoftTest.model.DetailedContactInformationModel;
 import com.example.TelrosSoftTest.model.PhotoUserModel;
-//import com.example.TelrosSoftTest.service.PhotoUserService;
 import com.example.TelrosSoftTest.service.ContactInformationService;
 import com.example.TelrosSoftTest.service.PhotoUserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,8 +23,8 @@ public class PhotoUser {
     private final ContactInformationService contactInformationService;
 
     @Autowired
-    private PhotoUser (PhotoUserService photoUserService,
-                       ContactInformationService contactInformationService) {
+    private PhotoUser(PhotoUserService photoUserService,
+                      ContactInformationService contactInformationService) {
         this.photoUserService = photoUserService;
         this.contactInformationService = contactInformationService;
     }
@@ -43,20 +41,20 @@ public class PhotoUser {
             photoUserModel.setContactInformationModel(user);
 
             if (photoUserService.create(photoUserModel, id)) {
-                return  new ResponseEntity<>(HttpStatus.CREATED);
+                return new ResponseEntity<>(HttpStatus.CREATED);
             } else {
                 return new ResponseEntity<>(HttpStatus.CONFLICT);
             }
 
 
         } else {
-        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
 
     }
 
     @GetMapping(value = "/users/{id}/photo", produces = MediaType.IMAGE_JPEG_VALUE)
-    public ResponseEntity<Resource>  getImageByName(@PathVariable(name = "id") Long id){
+    public ResponseEntity<Resource> getImageByName(@PathVariable(name = "id") Long id) {
 
         if (photoUserService.read(id) != null) {
             byte[] image = ImageUtils.decompressImage(photoUserService.read(id).getImageData());

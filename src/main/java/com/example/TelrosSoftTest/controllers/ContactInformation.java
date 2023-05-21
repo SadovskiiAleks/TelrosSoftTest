@@ -1,13 +1,12 @@
 package com.example.TelrosSoftTest.controllers;
 
 import com.example.TelrosSoftTest.model.ContactInformationModel;
+import com.example.TelrosSoftTest.service.ContactInformationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import com.example.TelrosSoftTest.service.ContactInformationService;
 
-import java.time.LocalDateTime;
 import java.util.List;
 
 @RestController
@@ -37,8 +36,8 @@ public class ContactInformation {
     public ResponseEntity<List<ContactInformationModel>> read() {
         final List<ContactInformationModel> users = contactInformationService.readAll();
 
-        if (users != null &&  !users.isEmpty()) {
-            return  new ResponseEntity<>(users, HttpStatus.OK);
+        if (users != null && !users.isEmpty()) {
+            return new ResponseEntity<>(users, HttpStatus.OK);
         } else {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
@@ -47,7 +46,7 @@ public class ContactInformation {
     @GetMapping(value = "/users/{id}")
     public ResponseEntity<ContactInformationModel> read(@PathVariable(name = "id") Long id) {
 
-      final ContactInformationModel user = contactInformationService.read(id);
+        final ContactInformationModel user = contactInformationService.read(id);
         if (user != null) {
             return new ResponseEntity<>(user, HttpStatus.OK);
         } else {

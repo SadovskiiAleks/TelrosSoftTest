@@ -18,7 +18,6 @@ public class PhotoUserModel {
     //@Lob "невозможно получить доступ к большому потоку" неудалось корректно исправить ошибку
     // возможно поможет анотация  @Transactional
     @Column(name = "imagedata", length = 1000)
-    //@Type(org.hibernate.type.ImageType.class)
     private byte[] imageData;
 
     @OneToOne(optional = false)

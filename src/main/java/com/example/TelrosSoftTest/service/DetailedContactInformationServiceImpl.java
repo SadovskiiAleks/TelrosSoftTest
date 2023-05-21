@@ -19,7 +19,7 @@ public class DetailedContactInformationServiceImpl implements DetailedContactInf
 
     @Override
     public boolean create(DetailedContactInformationModel detailedContactInformationModel, long id) {
-        if (!detailedContactInformationRepository.existsById(id)){
+        if (!detailedContactInformationRepository.existsById(id)) {
             detailedContactInformationRepository.save(detailedContactInformationModel);
             return true;
         } else {
@@ -36,7 +36,7 @@ public class DetailedContactInformationServiceImpl implements DetailedContactInf
 
     @Override
     public DetailedContactInformationModel read(Long id) {
-        if (detailedContactInformationRepository.existsById(id)){
+        if (detailedContactInformationRepository.existsById(id)) {
             return detailedContactInformationRepository.getReferenceById(id);
         } else {
             return null;
